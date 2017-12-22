@@ -9,10 +9,10 @@ html {
 
 body {
     background: black url("bg.jpg") center center repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -22,41 +22,44 @@ body {
 a{
     color: #1B2F59;
 }
+br{
+    display: none;
+}
+a:hover{
+    text-decoration:none;
+    opacity: 0.9;
+}
 #layout {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    background-color: rgba(255, 255, 255, .8);
 }
-
 #header {
     font-weight: bold;
 }
-
-#body {
-    text-align: center;
-    width: 100%;
-}
-
 #footer {
     background-color: #F7F7F7;
-    margin-top: 15px;
     width: 100%;
 }
-
+#body {
+    min-height: 500px;
+}
 .max-width {
     word-break: break-all;
+    max-width: 100%;
 }
 
 .zenHeader .container-fluid{
     padding: 0px 30px;
    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 4px 5px 0 rgba(0, 0, 0, 0.08), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.zenHeader{
+    margin-bottom: 0px;
 }
 .zenHeader  .navbar-text{
     margin-left: 0px;
@@ -70,8 +73,6 @@ a{
     font-weight: 400;
     color: #1B2F59;
 }
-
-
 .zenHeader .nav li a:hover{
     color: #1B2F59;
 }
@@ -103,6 +104,135 @@ a{
 }
 .zenHeader .nav{
     padding: 6px 0px;
+}
+/*________________tab section css___________*/
+
+.zenTabsWrap{
+    text-align: center;
+    padding: 70px 0px; 
+}
+.zenTabsWrap .nav-justified{
+    display: inline-block;
+    width: auto;
+    padding-bottom: 10px;
+}
+.zenTabs {
+    text-align: left;
+}
+.zenTabs .r3{
+    margin: 15px auto auto auto;
+}
+.zenTabs ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.zenTabsWrap .nav-justified > li{
+    width: auto;
+}
+.zenTabsWrap .nav-justified > li a{
+    border-radius: 0;
+    font-size: 16px;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: capitalize;
+    width: 158px;
+    outline: none;
+    background-color: #1b2f59;
+    color: #fff;
+    font-weight: 500;
+}
+.zenTabsWrap .nav-justified > li + li a{
+    margin-left: 3px;
+}
+.zenTabsWrap .nav-pills > li.active > a,
+ .zenTabsWrap .nav-pills > li.active > a:focus,
+.zenTabsWrap  .nav-pills > li.active > a:hover {
+    background-color: #69FFBD;
+    color: #1b2f59;
+}
+
+.zenTabs > div {
+    padding-top: 20px;
+}
+
+.zenTabs {
+    box-shadow: 0px 0px 10px #CCC;
+    background: #ededed;
+    padding: 24px 20px 14px 20px;
+}
+
+.btn-default {
+    background-color: #fff;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 1px solid #1b2f59;
+    border-radius: 0;
+    color: #1b2f59;
+    padding: 3px 10px;
+    text-shadow: 0 0;
+}
+.btn-default:hover{
+    background-color: #1b2f59;
+    color: #fff;
+    border-color: #1b2f59;
+}
+
+hr{
+    display: none;
+}
+.radio-inline {
+    margin-right: 30px;
+    display: inline-block;
+}
+.max-width{
+    padding-top: 15px;
+}
+.r2 h1{
+    font-size: 32px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 6px;
+}
+.r2 h3{
+    font-size: 23px;
+    padding: 0px;
+    margin: 0px; 
+    margin-bottom: 15px;
+
+}
+
+.zentabcode{
+    max-width: 200px;
+}
+
+#Multisig .btn {
+    margin-top: 28px;
+}
+#Bulk .radio-inline {
+    margin-top: 30px;
+}
+#Bulk .btn {
+    margin-top: 27px;
+}
+#Brain .radio-inline {
+    margin-top: 24px;
+}
+#Brain .btn {
+    margin-top: 27px;
+}
+
+#Details .btn {
+    margin-top: 27px;
+}
+
+.multisigsubtitle {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
+}
+.multisigsecretcode{
+    max-width: 150px
 }
 
 /**--------------footer-css---------**/
@@ -156,76 +286,6 @@ a{
     opacity: 0.6;
 }
 
-
-#body.container{
-    width: 1170px;
-    margin: 0 auto;
-}
-.zenTabsWrap{
-    text-align: center;
-}
-.zenTabsWrap .nav-justified{
-    display: inline-block;
-    width: auto;
-    padding-bottom: 10px;
-}
-.zenTabs {
-    text-align: left;
-}
-.zenTabsWrap .nav-justified > li{
-    width: auto;
-}
-.zenTabsWrap .nav-justified > li a{
-    border-radius: 0;
-    font-size: 16px;
-    padding: 12px 0;
-    text-align: center;
-    text-transform: capitalize;
-    width: 158px;
-    outline: none;
-    background-color: #1b2f59;
-    color: #fff;
-    font-weight: 500;
-}
-.zenTabsWrap .nav-justified > li + li a{
-    margin-left: 3px;
-}
-.zenTabsWrap .nav-pills > li.active > a,
- .zenTabsWrap .nav-pills > li.active > a:focus,
-.zenTabsWrap  .nav-pills > li.active > a:hover {
-    background-color: #69FFBD;
-    color: #1b2f59;
-}
-
-.zenTabs > div {
-    padding-top: 20px;
-}
-
-.zenTabs {
-    box-shadow: 0px 0px 10px #CCC;
-    background: #ededed;
-    padding: 10px 20px 10px 20px;
-}
-
-.btn-default {
-    background-color: #fff;
-    background-image: none;
-    background-repeat: repeat-x;
-    border: 1px solid #1b2f59;
-    border-radius: 0;
-    color: #1b2f59;
-    padding: 3px 10px;
-    text-shadow: 0 0;
-}
-.btn-default:hover{
-    background-color: #1b2f59;
-    color: #fff;
-    border-color: #1b2f59;
-}
-
-hr{
-    display: none;
-}
 @media screen {
     .print-only {
         display: none;
@@ -260,7 +320,8 @@ hr{
         display: block;
         left: 33.5%;
         top: 48.5%;
-
+        color: #1b2f59;
+        font-weight: 900;
         font-size: 0.66em;
     }
     #art-area>#addr-str2 {
@@ -306,8 +367,8 @@ hr{
         margin: 0%;
     }
 
-    #header, #footer, .nav, hr, .r1, .r3, h2 {
-        display: none;
+    #header, #footer, .nav, hr, .r1, .r3, h2{
+        display: none!important;
     }
 
     #layout {
@@ -326,7 +387,23 @@ hr{
         height: 100%;
         top: 0;
     }
-
+    .max-width{
+        padding: 0;
+        margin: 0px auto 20px auto;
+        text-align: center
+    }
+    .zenTabsWrap{
+        padding: 0px;
+    }
+    .zentabcode{
+       margin: 0 auto;
+    }
+    .multisigsecretcode{
+        margin: 0 auto;
+    }
+    #Bulk{
+        margin-top: 20px;
+    }
     #art-area>#addr-QR {
         position: relative;
         display: block;

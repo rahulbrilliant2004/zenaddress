@@ -149,7 +149,7 @@ class Brain extends Component {
                             />
                         </FormGroup>
                     </Col>
-                    <Col md={3}>
+                    <Col md={2}>
                         <Button onClick={this.state.type === 'T' ?
                             () => this.genTAddress()
                             : () => this.genZAddress()}
@@ -157,7 +157,7 @@ class Brain extends Component {
                             Generate a new wallet
                         </Button>
                     </Col>
-                    <Col md={3}>
+                    <Col md={2}>
                         <Button onClick={window.print}>
                             Print
                         </Button>
@@ -166,7 +166,7 @@ class Brain extends Component {
                 <hr />
                 {this.state.addr ? (
                     <Row className="r2">
-                        <Col md={6} className="max-width">
+                        <Col md={3} className="max-width col-sm-offset-3">
                             <h1 style={{color:'green'}}>Public</h1>
                             <h3>Zen Address</h3>
                             <div>
@@ -174,15 +174,15 @@ class Brain extends Component {
                                     bgColor="#FFFFFF"
                                     fgColor="#000000"
                                     level="L"
-                                    style={{ width: 256 }}
+                                    style={{ width: 200 }}
                                     value={this.state.addr}
                                 />
                             </div>
-                            <div>
+                            <div className="zentabcode">
                                 {this.state.addr}
                             </div>
                         </Col>
-                        <Col md={6} className="max-width">
+                        <Col md={3} className="max-width">
                             <h1 style={{color:'red'}}>Secret</h1>
                             <div>
                                 {this.state.type === 'T' ? (
@@ -195,11 +195,11 @@ class Brain extends Component {
                                         bgColor="#FFFFFF"
                                         fgColor="#000000"
                                         level="L"
-                                        style={{ width: 256 }}
+                                        style={{ width: 200 }}
                                         value={this.state.wif}
                                     />
                                 </div>
-                                <p>{this.state.wif}</p>
+                                <div className="zentabcode">{this.state.wif}</div>
                             </div>
                             <p>{this.getZpriv()}</p>
                         </Col>

@@ -55,13 +55,15 @@ export default class MainPanel extends Component {
 
     render() {
         return (
-            <Grid id="body">
-                <Row>
-                    <Col sm={12}>
-                        {this.renderNav()}
-                    </Col>
-                </Row>
-            </Grid>
+            <div id="body">
+                <Grid>
+                    <Row>
+                        <Col sm={12}>
+                            {this.renderNav()}
+                        </Col>
+                    </Row>
+                </Grid>
+            </div>
         );
     }
 }
