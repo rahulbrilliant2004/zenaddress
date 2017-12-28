@@ -299,6 +299,7 @@ hr{
         height: 245px;
         margin: auto;
         overflow: hidden;
+        text-align: center;
     }
 
     #art-area>#addr-QR {
@@ -366,7 +367,13 @@ hr{
         size: landscape;
         margin: 0%;
     }
-
+    .container{
+        width: 100%;
+        padding: 0px;
+    }
+    body{
+        position: relative;
+    }
     #header, #footer, .nav, hr, .r1, .r3, h2{
         display: none!important;
     }
@@ -398,12 +405,45 @@ hr{
     .zentabcode{
        margin: 0 auto;
     }
+
+    .zenTabs > div {
+        padding-top: 0px;
+    }
+
     .multisigsecretcode{
         margin: 0 auto;
     }
     #Bulk{
         margin-top: 20px;
     }
+    #art-area>#addr-QR {
+        position: relative;
+        display: block;
+        left: 31%;
+        top: 21%;
+    }
+    #art-area>#addr-QR>svg {
+        width: 12vw !important;
+        height: 12vw !important;
+    }
+
+    #layout {
+        display: block;
+    }
+
+    #art1, #art2 {
+        width: 100% !important;
+        height: 100% !important;
+        margin: auto;
+    }
+
+    #art-area {
+        position: absolute;
+        width: 100%!important;
+        height: 100%!important;
+        top: 0;
+    }
+
     #art-area>#addr-QR {
         position: relative;
         display: block;
@@ -439,6 +479,26 @@ hr{
         left: 28.65%;
         top: 7%;
         font-size: 1.1vw;
+        -webkit-transform: rotate(-180deg) !important;
+        -moz-transform: rotate(-180deg) !important;
+        -o-transform: rotate(-180deg) !important;
+        -ms-transform: rotate(-180deg) !important;
+        transform: rotate(-180deg) !important;
+    }
+
+    #art-area>#wif-str1 {
+        position: relative;
+        display: block;
+        left: -27.1%;
+        top: 12.55%;
+        font-size: 0.76vw;
+    }
+    #art-area>#wif-str2 {
+        position: relative;
+        display: block;
+        left: -27.1%;
+        top: 0%;
+        font-size: 0.76vw;
         -webkit-transform: rotate(-180deg) !important;
         -moz-transform: rotate(-180deg) !important;
         -o-transform: rotate(-180deg) !important;
